@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Buuz"/>
+        <attribute name="authors" value=""/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-10-28 09:39:10 AM"/>
+        <attribute name="created" value="ZW5odXU7RU5IRUVFX0xBUFRPUDsyMDI2LTEwLTI4OzA5OjI3OjA1IEFNOzI4MDc="/>
+        <attribute name="edited" value="ZW5odXU7RU5IRUVFX0xBUFRPUDsyMDI2LTEwLTI4OzA5OjM5OjEwIEFNOzI7MjkxNQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ZochidToo" type="Integer" array="False" size=""/>
+            <declare name="NeghundnoogdhBuuz" type="Integer" array="False" size=""/>
+            <declare name="ail1" type="Integer" array="False" size=""/>
+            <declare name="ail2" type="Integer" array="False" size=""/>
+            <declare name="ail3" type="Integer" array="False" size=""/>
+            <declare name="NiitBuuz" type="Integer" array="False" size=""/>
+            <declare name="GurilKg" type="Real" array="False" size=""/>
+            <declare name="odor" type="Integer" array="False" size=""/>
+            <declare name="Tur" type="Integer" array="False" size=""/>
+            <output expression="&quot;Zochdiin too:&quot;" newline="True"/>
+            <input variable="ZochidToo"/>
+            <while expression="ZochidToo &lt;= 0">
+                <comment text="Unsupported shape: body&#10;"/>
+            </while>
+            <output expression="&quot;Neg hund heden buuz:&quot;" newline="True"/>
+            <input variable="NeghundnoogdhBuuz"/>
+            <output expression="&quot;1-r ail:&quot;" newline="True"/>
+            <input variable="ail1"/>
+            <output expression="&quot;2-r ail:&quot;" newline="True"/>
+            <input variable="ail2"/>
+            <output expression="&quot;3-r ail:&quot;" newline="True"/>
+            <input variable="ail3"/>
+            <assign variable="NiitBuuz" expression="zochidToo * NeghundnoogdhBuuz"/>
+            <assign variable="GurilKg" expression="(NiitBuuz * 25) / 1000"/>
+            <output expression="&quot;Niit buuz: &quot; &amp; NiitBuuz" newline="True"/>
+            <output expression="&quot;Guril: &quot; &amp; GurilKg &amp; &quot; kg&quot;" newline="True"/>
+            <if expression="(zochidToo &gt;= 50) &amp;&amp; (NeghundnoogdhBuuz &gt;= 10)">
+                <then>
+                    <output expression="&quot;Tom hurim&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Jijig hurim&quot;" newline="True"/>
+                </else>
+            </if>
+            <if expression="NiitBuuz &gt;= 1000">
+                <then>
+                    <output expression="&quot;Mash ih&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="NiitBuuz &gt;= 500">
+                        <then>
+                            <output expression="&quot;Dund zereg&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Bagahan&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <for variable="odor" start="1" end="5" direction="inc" step="1">
+                <comment text="Unsupported shape: body&#10;"/>
+            </for>
+            <call expression="CalculateMaterials(NiitBuuz)"/>
+            <if expression="ail1 &lt; ail2">
+                <then>
+                    <assign variable="Tur" expression="ail1"/>
+                    <assign variable="ail1" expression="ail2"/>
+                    <assign variable="ail2" expression="Tur"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="ail1 &lt; ail3">
+                <then>
+                    <assign variable="Tur" expression="ail1"/>
+                    <assign variable="ail1" expression="ail3"/>
+                    <assign variable="ail3" expression="Tur"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="ail2 &lt; ail3">
+                <then>
+                    <assign variable="tur" expression="ail2"/>
+                    <assign variable="ail2" expression="ail3"/>
+                    <assign variable="ail3" expression="tur"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;Erembelsen: &quot; &amp; ail1 &amp; &quot;, &quot; &amp; ail2 &amp; &quot;, &quot; &amp; ail3" newline="True"/>
+        </body>
+    </function>
+    <function name="CalculateMaterials" type="None" variable="">
+        <parameters>
+            <parameter name="tong" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="mahKg" type="Real" array="False" size=""/>
+            <declare name="gurilKg2" type="Real" array="False" size=""/>
+            <assign variable="mahKg" expression="(tong * 30) / 1000"/>
+            <assign variable="gurilKg2" expression="(tong * 35) / 1000"/>
+            <output expression="&quot;Mah: &quot; &amp; mahKg &amp; &quot; kg&quot;" newline="True"/>
+            <output expression="&quot;Guril: &quot; &amp; gurilKg2 &amp; &quot; kg&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
